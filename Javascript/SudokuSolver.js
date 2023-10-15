@@ -29,8 +29,7 @@ function Solve(x, y) {
   } else {
     for (i = 0; i < board.length; i++) {
       let cell = board[i][i];
-      if ((board[i][i] = cell)) {
-        board[x][y] = cell;
+      if ((board[x][y] = cell)) {
         return true;
       }
     }
