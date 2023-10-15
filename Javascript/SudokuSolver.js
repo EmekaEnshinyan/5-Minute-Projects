@@ -23,6 +23,21 @@ let board = [
 let x = Math.floor(Math.random() * 10);
 console.log(x);
 
+function Solve(x, y) {
+  if (board[y][x] != 0) {
+    return Solve(x, y); // ?
+  } else {
+    for (i = 0; i < board.length; i++) {
+      let cell = board[i][i];
+      if ((board[i][i] = cell)) {
+        board[x][y] = cell;
+        return true;
+      }
+    }
+  }
+  return false;
+}
+MakeBoard = () => {};
 GenerateSudokuNum = () => {
   num = Math.floor(Math.random() * 10);
   if (num > 10 || num == 0) {
